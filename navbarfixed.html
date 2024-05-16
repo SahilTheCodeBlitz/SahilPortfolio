@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Khane Portfolio</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between; /* Adjust alignment */
+            align-items: center;
+            position: relative; /* Position the parent for absolute positioning */
+        }
+
+        nav .logo {
+            color: #fff;
+            font-size: 24px;
+            margin-left: 20px; /* Add some left margin for spacing */
+        }
+
+        .nav-links {
+            display: flex; /* Initially hide navigation links */
+            flex-direction: row; /* Align links horizontally */
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px; /* Adjust spacing */
+            font-size: 18px;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #8C52FF;
+        }
+
+        .nav-links a:hover {
+            background-color: #5CE1E6;
+        }
+
+        /* Hamburger menu styles */
+        .hamburger-menu {
+            color: #fff;
+            font-size: 24px;
+            margin-right: 20px;
+            cursor: pointer;
+            display: none; /* Initially hide hamburger menu icon */
+        }
+
+        /* Adjust visibility for small screens */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide navigation links on smaller screens */
+                flex-direction: column; /* Align links vertically */
+                position: absolute; /* Position the links absolutely */
+                top: 100%; /* Position below the navbar */
+                left: 0; /* Align to the left */
+                width: 100%; /* Full width */
+                background-color: #333; /* Match the background color of the navbar */
+                z-index: 1000; /* Ensure links appear above other content */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+            }
+
+            .nav-links.show-nav {
+                display: flex; /* Show navigation links */
+            }
+
+            .nav-links a {
+                margin: 10px; /* Adjust spacing */
+                width: calc(100% - 20px); /* Adjust width */
+                display: block; /* Display links as block elements */
+            }
+
+            .hamburger-menu {
+                display: block; /* Display hamburger menu icon on smaller screens */
+            }
+        }
+
+        /* Other styles... */
+    </style>
+</head>
+<body>
+    <nav id="navbar"> 
+        <span class="logo">Sahil Khane</span>   
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">☰</div> <!-- Hamburger menu icon -->
+    </nav>
+
+    <!-- Rest of your HTML content... -->
+
+    <script>
+        // Function to toggle visibility of hidden navigation links
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show-nav');
+        }
+    </script>
+</body>
+</html>

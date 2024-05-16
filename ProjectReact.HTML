@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Project</title>
+    <style>
+        /* General styles */
+            /* General styles */
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #23263f;
+            
+        }
+
+        header {
+            background-color: #010223;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #000000;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px; /* Increased gap between projects */
+        }
+
+        .project {
+            background-color: #021534;
+            border-radius: 15px; /* Increased border radius */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Increased shadow */
+            padding: 30px; /* Increased padding */
+            text-align: center;
+            max-width: 600px; /* Increased max width */
+            width: 100%;
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-video {
+            width: 100%;
+            height: auto;
+            border-radius: 15px; /* Increased border radius */
+            margin-bottom: 30px; /* Increased margin */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px; /* Increased padding */
+            background-color: #000000;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px; /* Increased border radius */
+            margin-top: 20px; /* Increased margin */
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>React Project</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+  
+</nav>
+
+<main>
+    <div class="project">
+        <h2>Real Estate Websites</h2>
+        <video class="project-video" controls>
+            <source src="project1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>This is a description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed lectus euismod, vehicula felis non, commodo quam.</p>
+        <a href="#" class="btn">GitHub</a>
+        <a href="#" class="btn">Live Demo</a>
+    </div>
+
+  
+</main>
+
+</body>
+</html>
